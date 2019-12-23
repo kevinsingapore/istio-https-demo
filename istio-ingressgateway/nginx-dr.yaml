@@ -1,0 +1,11 @@
+apiVersion: networking.istio.io/v1alpha3
+kind: DestinationRule
+metadata:
+  name: nginx
+  namespace: default
+spec:
+  host: nginx
+  subsets:
+    - name: https
+      labels:
+        version: v3
